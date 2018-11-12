@@ -1,0 +1,5 @@
+/* pages/searchGoods/searchGoods.wxss */
+.weui-cell__bd,.weui-cell__ft{position: relative;}
+input{border-bottom: 1px solid #777;}
+icon.del_input{position: absolute;right: 0; bottom: 0; border-bottom: 1px solid #777;padding-bottom: 3px;}
+.btn-search{display: inline-block; margin-left: 20rpx; padding: 6rpx 20rpx;border-radius: 24rpx;background: -webkit-linear-gradient(left,#ffbc3f,#ffb03f); color: #fff;}

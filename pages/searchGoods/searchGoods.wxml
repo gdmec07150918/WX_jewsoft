@@ -1,0 +1,14 @@
+<!--pages/searchGoods/searchGoods.wxml-->
+<!-- <text>pages/searchGoods/searchGoods.wxml</text> -->
+<view class='weui-cell'>
+  <view class='weui-cell__bd'>
+    <input placeholder="输入商品关键字" value='{{value}}' focus="true" confirm-type="search" bindinput='binput' style='width: calc(100% - {{del_input ? "18px" : 0}});' ></input>
+    <block wx:if='{{del_input}}'>
+      <icon class='del_input' type="cancel" size='18' color="#666" bindtap='del_input'></icon>
+    </block>
+  </view>
+  <view class='weui-cell__ft'>
+    <view class='btn-search'>搜索</view>
+  </view>
+</view>
+

@@ -1,0 +1,23 @@
+<!--pages/grid/grid.wxml-->
+<scroll-view>
+  <view class='goods_list {{column ? "cols_2": "cols_1"}}'>
+    <navigator class='gs_item' wx:for="{{allgoods}}" url='/pages/display/display?itemsign={{allgoods[index].ItemSign}}'>
+      <view class='info'>
+        <view class='img_cover'>
+          <image src='https://gs.jewsoft.com/{{allgoods[index].ItemImage}}' lazy-load='true' mode='aspectFill'></image>
+        </view>
+        <view class='gs_item_info'>
+          <view class='gs_item_title'>{{allgoods[index].ItemName}}</view>
+          <view class='gs_item_price'>￥<text class='price'>{{allgoods[index].WholePrice}}</text></view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class='msearch_aside' bindtap='sortTypeChange'>
+    <image wx:if="{{column}}" class='mode-tab_image' src='../../images/main/sort_column.png'></image>
+    <image wx:else class='mode-tab_image' src='../../images/main/sort_row.png'></image>
+  </view>
+  <view wx:if="{{gssize != loadsize}}" class='weui-loadmore weui-loadmore_line'>
+    <view class='weui-loadmore__tips'>已经到底啦</view>
+  </view>
+</scroll-view>
